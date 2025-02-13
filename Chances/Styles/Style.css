@@ -1,5 +1,6 @@
 body {
   background-color: #D2B48C;
+  background-image: url('../Assets/heart.jpg');
 }
 
 h1 {
@@ -55,7 +56,7 @@ h1 {
 /*background-image: linear-gradient(#F4D6AE, #C3A57D);*/
 .button {
   text-align: center;
-  background-image: url('../Assets/flag.jpg')
+  background-image: url('../Assets/flag.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
@@ -71,7 +72,7 @@ h1 {
 /*background-image: linear-gradient(#D2B48C, #B2946C);*/
 .button:hover {
   text-align: center;
-  background-image: url('../Assets/flag.jpg')
+  background-image: url('../Assets/flag.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;

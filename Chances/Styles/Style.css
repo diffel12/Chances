@@ -52,9 +52,12 @@ h1 {
   border-width: 1px;
 }
 
+/*background-image: linear-gradient(#B0926A, #90724A);*/
 .button {
   text-align: center;
-  background-image: url('../Assets/flag.png')
+  background-image: url('../Assets/flag.jpg')
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 50%;
   height: 10%;
   margin-left: 25%;
@@ -65,9 +68,12 @@ h1 {
   border-width: 2px;
 }
 
+/*background-image: linear-gradient(#D2B48C, #B2946C);*/
 .button:hover {
   text-align: center;
-  background-image: linear-gradient(#D2B48C, #B2946C);
+  background-image: url('../Assets/flag.jpg')
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 50%;
   height: 10%;
   margin-left: 25%;

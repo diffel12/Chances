@@ -206,7 +206,6 @@ function item(r1, r2, r3, r4, r5) {
       }, 5000);
    } else {
    var totalval = 1;
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
       cooldown = true;
       document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
       document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
@@ -219,7 +218,7 @@ function item(r1, r2, r3, r4, r5) {
       setTimeout(function() {
          if (HAKARIUSED == false) {
             var same = parseInt(document.getElementById('1').innerHTML);
-            if (document.getElementById('1').innerHTML == same && document.getElementById('2').innerHTML == same && document.getElementById('3').innerHTML == same && document.getElementById('4').innerHTML == same && document.getElementById('5').innerHTML == same) {
+            if (r1 == same && r2 == same && r3 == same && r4 == same && r5 == same) {
                luckbooster += same/10;
                document.getElementById('1').outerHTML = "<a class='ledgendnum' id='1'>"+same+"</a>";
                document.getElementById('2').outerHTML = "<a class='ledgendnum' id='2'>"+same+"</a>";
@@ -237,48 +236,45 @@ function item(r1, r2, r3, r4, r5) {
       }, 3000);
 
       setTimeout(function() {
-         var value = getRandomNumber(boostedluck);
-         document.getElementById('1').innerHTML = value;
-         totalval *= boostedluck[value - 1] * 100;
+         document.getElementById('1').innerHTML = r1;
+         totalval *= boostedluck[r1 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
-         decToPerc = boostedluck[value - 1] * 100;
-         document.getElementById(value+'b').innerHTML = value+"'s rarity: "+decToPerc+"%";
+         decToPerc = boostedluck[r1 - 1] * 100;
+         document.getElementById(r1+'b').innerHTML = r1+"'s rarity: "+decToPerc+"%";
          totalval /= 100
-         if (value == 5 || value == 7 || value == 9) {
-            document.getElementById('1').outerHTML = "<a class='rarenum' id='1'>"+value+"</a>";
+         if (r1 == 5 || r1 == 7 || r1 == 9) {
+            document.getElementById('1').outerHTML = "<a class='rarenum' id='1'>"+r1+"</a>";
          }
          document.getElementById('button').innerHTML = "Cooldown: 2";
       }, 500);
 
       setTimeout(function() {
-         var value = getRandomNumber(boostedluck);
-         document.getElementById('2').innerHTML = value;
-         totalval *= boostedluck[value - 1] * 100;
+         document.getElementById('2').innerHTML = r2;
+         totalval *= boostedluck[r2 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
-         decToPerc = boostedluck[value - 1] * 100;
-         document.getElementById(value+'b').innerHTML = value+"'s rarity: "+decToPerc+"%";
+         decToPerc = boostedluck[r2 - 1] * 100;
+         document.getElementById(r2+'b').innerHTML = r2+"'s rarity: "+decToPerc+"%";
          totalval /= 100
-         if (value == 5 || value == 7 || value == 9) {
-            document.getElementById('2').outerHTML = "<a class='rarenum' id='2'>"+value+"</a>";
+         if (r2 == 5 || r2 == 7 || r2 == 9) {
+            document.getElementById('2').outerHTML = "<a class='rarenum' id='2'>"+r2+"</a>";
          }
          document.getElementById('button').innerHTML = "Cooldown: 1.5";
       }, 1000);
 
       setTimeout(function() {
-         var value = getRandomNumber(boostedluck);
-         document.getElementById('3').innerHTML = value;
-         totalval *= boostedluck[value - 1] * 100;
-         document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
+         document.getElementById('3').innerHTML = r3;
+         totalval *= boostedluck[r3 - 1] * 100;
+         document.getElementById('totalrarity').innerHTML = r3+"% Chance";
          decToPerc = boostedluck[value - 1] * 100;
-         document.getElementById(value+'b').innerHTML = value+"'s rarity: "+decToPerc+"%";
+         document.getElementById(r3+'b').innerHTML = r3+"'s rarity: "+decToPerc+"%";
          totalval /= 100 
-         if (value == 5 || value == 7 || value == 9) {
-            document.getElementById('3').outerHTML = "<a class='rarenum' id='3'>"+value+"</a>";
+         if (r3 == 5 || r3 == 7 || r3 == 9) {
+            document.getElementById('3').outerHTML = "<a class='rarenum' id='3'>"+r3+"</a>";
          }
-         if (document.getElementById('1').innerHTML == value && document.getElementById('2').innerHTML == value) { 
-             document.getElementById('1').outerHTML = "<a class='epiknum' id='1'>"+value+"</a>";
-             document.getElementById('2').outerHTML = "<a class='epiknum' id='2'>"+value+"</a>";
-             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+value+"</a>";
+         if (document.getElementById('1').innerHTML == r3 && document.getElementById('2').innerHTML == r3) { 
+             document.getElementById('1').outerHTML = "<a class='epiknum' id='1'>"+r3+"</a>";
+             document.getElementById('2').outerHTML = "<a class='epiknum' id='2'>"+r3+"</a>";
+             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+r3+"</a>";
              if (speedboost == false) {
                 speedboost = true;
                 document.getElementById('boosteritem3').outerHTML = "<div class='boosteritem' id='boosteritem3'><h2>Lucky Sprint!</h2> Speed Boost: -2.5sec</div>";
@@ -288,38 +284,25 @@ function item(r1, r2, r3, r4, r5) {
                 document.getElementById('boosteritem4').outerHTML = "<div class='boosteritem' id='boosteritem4'><h2>Xtra Luck</h2> Luck Boost: "+xtraluck+"%</div>";
                 document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
              }
-         } else if (document.getElementById('2').innerHTML == value && document.getElementById('4').innerHTML == value) {
-             document.getElementById('2').outerHTML = "<a class='epiknum' id='2'>"+value+"</a>";
-             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+value+"</a>";
-             document.getElementById('4').outerHTML = "<a class='epiknum' id='4'>"+value+"</a>";
-             if (speedboost == false) {
-                speedboost = true;
-                document.getElementById('boosteritem3').outerHTML = "<div class='boosteritem' id='boosteritem3'><h2>Lucky Sprint!</h2> Speed Boost: -2.5sec</div>";
-             } else {
-                luckbooster += 0.05
-                xtraluck += 5
-                document.getElementById('boosteritem4').outerHTML = "<div class='boosteritem' id='boosteritem4'><h2>Xtra Luck</h2> Luck Boost: "+xtraluck+"%</div>";
-                document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
-             }
+         }
          }
          document.getElementById('button').innerHTML = "Cooldown: 1";
       }, 1500);
 
       setTimeout(function() {
-         var value = getRandomNumber(boostedluck);
-         document.getElementById('4').innerHTML = value;
-         totalval *= boostedluck[value - 1] * 100;
+         document.getElementById('4').innerHTML = r4;
+         totalval *= boostedluck[r4 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
-         decToPerc = boostedluck[value - 1] * 100;
-         document.getElementById(value+'b').innerHTML = value+"'s rarity: "+decToPerc+"%";
+         decToPerc = boostedluck[r4 - 1] * 100;
+         document.getElementById(r4+'b').innerHTML = r4+"'s rarity: "+decToPerc+"%";
          totalval /= 100
-         if (value == 5 || value == 7 || value == 9) {
-            document.getElementById('4').outerHTML = "<a class='rarenum' id='4'>"+value+"</a>";
+         if (r4 == 5 || r4 == 7 || r4 == 9) {
+            document.getElementById('4').outerHTML = "<a class='rarenum' id='4'>"+r4+"</a>";
          }
-         if (document.getElementById('2').innerHTML == value && document.getElementById('3').innerHTML == value) { 
-             document.getElementById('2').outerHTML = "<a class='epiknum' id='2'>"+value+"</a>";
-             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+value+"</a>";
-             document.getElementById('4').outerHTML = "<a class='epiknum' id='4'>"+value+"</a>";
+         if (document.getElementById('2').innerHTML == r4 && document.getElementById('3').innerHTML == r4) { 
+             document.getElementById('2').outerHTML = "<a class='epiknum' id='2'>"+r4+"</a>";
+             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+r4+"</a>";
+             document.getElementById('4').outerHTML = "<a class='epiknum' id='4'>"+r4+"</a>";
              if (speedboost == false) {
                 speedboost = true;
                 document.getElementById('boosteritem3').outerHTML = "<div class='boosteritem' id='boosteritem3'><h2>Lucky Sprint!</h2> Speed Boost: -2.5sec</div>";
@@ -334,19 +317,19 @@ function item(r1, r2, r3, r4, r5) {
 
       setTimeout(function() {
          var value = getRandomNumber(boostedluck);
-         document.getElementById('5').innerHTML = value;
-         totalval *= boostedluck[value - 1] * 100;
+         document.getElementById('5').innerHTML = r5;
+         totalval *= boostedluck[r5 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
-         decToPerc = boostedluck[value - 1] * 100;
-         document.getElementById(value+'b').innerHTML = value+"'s rarity: "+decToPerc+"%";
+         decToPerc = boostedluck[r5 - 1] * 100;
+         document.getElementById(r5+'b').innerHTML = r5+"'s rarity: "+decToPerc+"%";
          totalval /= 100
-         if (value == 5 || value == 7 || value == 9) {
-            document.getElementById('5').outerHTML = "<a class='rarenum' id='5'>"+value+"</a>";
+         if (r5 == 5 || r5 == 7 || r5 == 9) {
+            document.getElementById('5').outerHTML = "<a class='rarenum' id='5'>"+r5+"</a>";
          }
-         else if (document.getElementById('3').innerHTML == value && document.getElementById('4').innerHTML == value) {
-             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+value+"</a>";
-             document.getElementById('4').outerHTML = "<a class='epiknum' id='4'>"+value+"</a>";
-             document.getElementById('5').outerHTML = "<a class='epiknum' id='5'>"+value+"</a>";
+         else if (document.getElementById('3').innerHTML == r5 && document.getElementById('4').innerHTML == r5) {
+             document.getElementById('3').outerHTML = "<a class='epiknum' id='3'>"+r5+"</a>";
+             document.getElementById('4').outerHTML = "<a class='epiknum' id='4'>"+r5+"</a>";
+             document.getElementById('5').outerHTML = "<a class='epiknum' id='5'>"+r5+"</a>";
              if (speedboost == false) {
                 speedboost = true;
                 document.getElementById('boosteritem3').outerHTML = "<div class='boosteritem' id='boosteritem3'><h2>Lucky Sprint!</h2> Speed Boost: -2.5sec</div>";

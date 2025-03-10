@@ -32,26 +32,26 @@ function capStone(Rarities, cap) {
 }
 
 const raritylists = [[0.11,0.24,0.36,0.48,0.05,0.612,0.07,0.816,0.09, 0.01], 
-                     [0.1, 0.20, 0.15, 0.12, 0.05, 0.13, 0.07, 0.08, 0.01, 0.01], 
-                     [0.12, 0.25, 0.18, 0.09, 0.06, 0.14, 0.11, 0.07, 0.08, 0.01], 
-                     [0.14, 0.26, 0.18, 0.15, 0.02, 0.19, 0.03, 0.12, 0.02, 0.01], 
-                     [0.11, 0.20, 0.22, 0.13, 0.05, 0.14, 0.07, 0.10, 0.02, 0.01], 
-                     [0.09, 0.21, 0.13, 0.18, 0.03, 0.17, 0.02, 0.08, 0.04, 0.01], 
-                     [0.12, 0.25, 0.16, 0.11, 0.05, 0.15, 0.07, 0.09, 0.01, 0.01], 
-                     [0.10, 0.24, 0.17, 0.14, 0.03, 0.13, 0.05, 0.11, 0.02, 0.01], 
-                     [0.15, 0.22, 0.19, 0.09, 0.02, 0.18, 0.07, 0.12, 0.01, 0.01], 
-                     [0.08, 0.22, 0.14, 0.18, 0.02, 0.17, 0.03, 0.11, 0.05, 0.01], 
-                     [0.10, 0.21, 0.19, 0.12, 0.03, 0.16, 0.05, 0.09, 0.05, 0.01], 
-                     [0.13, 0.23, 0.15, 0.10, 0.03, 0.18, 0.07, 0.11, 0.02, 0.01], 
-                     [0.09, 0.20, 0.17, 0.13, 0.01, 0.14, 0.02, 0.12, 0.07, 0.01], 
-                     [0.11, 0.24, 0.16, 0.12, 0.03, 0.15, 0.04, 0.08, 0.07, 0.01], 
-                     [0.07, 0.21, 0.14, 0.19, 0.02, 0.16, 0.05, 0.10, 0.06, 0.01], 
-                     [0.12, 0.22, 0.18, 0.09, 0.03, 0.17, 0.05, 0.11, 0.03, 0.01], 
-                     [0.08, 0.20, 0.15, 0.14, 0.01, 0.16, 0.03, 0.10, 0.13, 0.01], 
-                     [0.10, 0.23, 0.17, 0.11, 0.03, 0.19, 0.05, 0.09, 0.03, 0.01], 
-                     [0.13, 0.24, 0.16, 0.08, 0.01, 0.18, 0.05, 0.11, 0.04, 0.01], 
-                     [0.11, 0.25, 0.19, 0.09, 0.02, 0.15, 0.07, 0.10, 0.02, 0.01], 
-                     [0.09, 0.22, 0.14, 0.13, 0.02, 0.17, 0.04, 0.12, 0.05, 0.02]];
+                     [0.1, 0.20, 0.15, 0.12, 0.05, 0.13, 0.07, 0.08, 0.01, 0], 
+                     [0.12, 0.25, 0.18, 0.09, 0.06, 0.14, 0.11, 0.07, 0.08, 0], 
+                     [0.14, 0.26, 0.18, 0.15, 0.02, 0.19, 0.03, 0.12, 0.02, 0], 
+                     [0.11, 0.20, 0.22, 0.13, 0.05, 0.14, 0.07, 0.10, 0.02, 0], 
+                     [0.09, 0.21, 0.13, 0.18, 0.03, 0.17, 0.02, 0.08, 0.04, 0], 
+                     [0.12, 0.25, 0.16, 0.11, 0.05, 0.15, 0.07, 0.09, 0.01, 0], 
+                     [0.10, 0.24, 0.17, 0.14, 0.03, 0.13, 0.05, 0.11, 0.02, 0], 
+                     [0.15, 0.22, 0.19, 0.09, 0.02, 0.18, 0.07, 0.12, 0.01, 0], 
+                     [0.08, 0.22, 0.14, 0.18, 0.02, 0.17, 0.03, 0.11, 0.05, 0], 
+                     [0.10, 0.21, 0.19, 0.12, 0.03, 0.16, 0.05, 0.09, 0.05, 0], 
+                     [0.13, 0.23, 0.15, 0.10, 0.03, 0.18, 0.07, 0.11, 0.02, 0], 
+                     [0.09, 0.20, 0.17, 0.13, 0.01, 0.14, 0.02, 0.12, 0.07, 0], 
+                     [0.11, 0.24, 0.16, 0.12, 0.03, 0.15, 0.04, 0.08, 0.07, 0], 
+                     [0.07, 0.21, 0.14, 0.19, 0.02, 0.16, 0.05, 0.10, 0.06, 0], 
+                     [0.12, 0.22, 0.18, 0.09, 0.03, 0.17, 0.05, 0.11, 0.03, 0], 
+                     [0.08, 0.20, 0.15, 0.14, 0.01, 0.16, 0.03, 0.10, 0.13, 0], 
+                     [0.10, 0.23, 0.17, 0.11, 0.03, 0.19, 0.05, 0.09, 0.03, 0], 
+                     [0.13, 0.24, 0.16, 0.08, 0.01, 0.18, 0.05, 0.11, 0.04, 0], 
+                     [0.11, 0.25, 0.19, 0.09, 0.02, 0.15, 0.07, 0.10, 0.02, 0], 
+                     [0.09, 0.22, 0.14, 0.13, 0.02, 0.17, 0.04, 0.12, 0.05, 0]];
 var decToPerc = 0;
 var luckbooster = 1;
 var cooldown = false;
@@ -80,8 +80,8 @@ function showraritytable() {
    }
 }
 
-function setTable(n1,n2,n3,n4,n5,n6,n7,n8,n9) {
-   chosenrarities = [n1/100,n2/100,n3/100,n4/100,n5/100,n6/100,n7/100,n8/100,n9/100]
+function setTable(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10=0) {
+   chosenrarities = [n1/100,n2/100,n3/100,n4/100,n5/100,n6/100,n7/100,n8/100,n9/100,n10/100]
    document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
 }
 
@@ -120,7 +120,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 5500);
 
       setTimeout(function() {
-         if (r1 - 1 == 10) {
+         if (r1 == 10) {
             document.getElementById('1').innerHTML = "0";
          } else {
             document.getElementById('1').innerHTML = r1;
@@ -137,10 +137,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 1000);
 
       setTimeout(function() {
-         if (r2 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r2 == 10) {
+            document.getElementById('2').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r2;
+            document.getElementById('2').innerHTML = r2;
          }
          totalval *= boostedluck[r2 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -154,10 +154,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 2000);
 
       setTimeout(function() {
-         if (r3 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r3 == 10) {
+            document.getElementById('3').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r3;
+            document.getElementById('3').innerHTML = r3;
          }
          totalval *= boostedluck[r3 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -185,10 +185,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 3000);
 
       setTimeout(function() {
-         if (r4 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r4 == 10) {
+            document.getElementById('4').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r4;
+            document.getElementById('4').innerHTML = r4;
          }
          totalval *= boostedluck[r4 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -216,10 +216,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 4000);
 
       setTimeout(function() {
-         if (r5 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r5 == 10) {
+            document.getElementById('5').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r5;
+            document.getElementById('5').innerHTML = r5;
          }
          totalval *= boostedluck[r5 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -277,7 +277,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 3000);
 
       setTimeout(function() {
-         if (r1 - 1 == 10) {
+         if (r1 == 10) {
             document.getElementById('1').innerHTML = "0";
          } else {
             document.getElementById('1').innerHTML = r1;
@@ -294,10 +294,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 500);
 
       setTimeout(function() {
-         if (r2 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r2 == 10) {
+            document.getElementById('2').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r2;
+            document.getElementById('2').innerHTML = r2;
          }
          totalval *= boostedluck[r2 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -311,10 +311,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 1000);
 
       setTimeout(function() {
-         if (r3 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r3 == 10) {
+            document.getElementById('3').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r3;
+            document.getElementById('3').innerHTML = r3;
          }
          totalval *= boostedluck[r3 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = r3+"% Chance";
@@ -338,15 +338,14 @@ function item(r1, r2, r3, r4, r5) {
                 document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
              }
          }
-         }
          document.getElementById('button').innerHTML = "Cooldown: 1";
       }, 1500);
 
       setTimeout(function() {
-         if (r4 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r4 == 10) {
+            document.getElementById('4').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r4;
+            document.getElementById('4').innerHTML = r4;
          }
          totalval *= boostedluck[r4 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -373,11 +372,10 @@ function item(r1, r2, r3, r4, r5) {
       }, 2000);
 
       setTimeout(function() {
-         var value = getRandomNumber(boostedluck);
-         if (r5 - 1 == 10) {
-            document.getElementById('1').innerHTML = "0";
+         if (r5 == 10) {
+            document.getElementById('5').innerHTML = "0";
          } else {
-            document.getElementById('1').innerHTML = r5;
+            document.getElementById('5').innerHTML = r5;
          }
          totalval *= boostedluck[r5 - 1] * 100;
          document.getElementById('totalrarity').innerHTML = totalval+"% Chance";
@@ -405,10 +403,11 @@ function item(r1, r2, r3, r4, r5) {
       }, 2500);
    }
    }
-});
+}
 
 function devclick(r1,r2,r3,r4,r5) {
    if (cooldown == false) {
+      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
       item(r1, r2, r3, r4, r5);
    }
 }
@@ -422,7 +421,8 @@ document.getElementById('button').addEventListener('click', function() {
       var value4 = getRandomNumber(boostedluck);
       var value5 = getRandomNumber(boostedluck);
       item(value1, value2, value3, value4, value5);
-   });
+   }
+});
 
 document.addEventListener('keydown', function() {
    if (event.key == ' ') {
@@ -434,6 +434,7 @@ document.addEventListener('keydown', function() {
          var value4 = getRandomNumber(boostedluck);
          var value5 = getRandomNumber(boostedluck);
          item(value1, value2, value3, value4, value5);
+      }
    }
 });
 

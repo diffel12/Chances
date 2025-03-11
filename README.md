@@ -3,7 +3,6 @@ A FREE game based off of a slot machine, hit download on the file above!
 
 REMEMBER: YOU MUST UNZIP FOR GAME TO WORK
 
-Update 1.9.2: 
-Added a new number (VERY RARE),
-Optimized code for reduced lag and an easier experience!
-note: The faster mode is broken, please stand by while it is being fixed.
+Update 1.9.3: 
+fixed a bug that broke the 2.5 sec cd mode!
+removed "0" as an obtainable number (it can still be used if you set it though).

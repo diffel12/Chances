@@ -103,39 +103,39 @@ function setTable(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10=0) {
 
 function item(r1, r2, r3, r4, r5) {
    if (cooldown == false) {
-   if (speedboost == false && tsb == false) {
-      var totalval = 1;
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
-      cooldown = true;
-      document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
-      document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
-      document.getElementById('3').outerHTML = "<a class='num' id='3'>0</a>";
-      document.getElementById('4').outerHTML = "<a class='num' id='4'>0</a>";
-      document.getElementById('5').outerHTML = "<a class='num' id='5'>0</a>";
-      document.getElementById('totalrarity').innerHTML = "Rolling!";
-      document.getElementById('button').innerHTML = "Cooldown: 5";
+   	if (speedboost == false && tsb == false) {
+      	var totalval = 1;
+      	var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+      	cooldown = true;
+      	document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
+      	document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
+      	document.getElementById('3').outerHTML = "<a class='num' id='3'>0</a>";
+      	document.getElementById('4').outerHTML = "<a class='num' id='4'>0</a>";
+      	document.getElementById('5').outerHTML = "<a class='num' id='5'>0</a>";
+      	document.getElementById('totalrarity').innerHTML = "Rolling!";
+      	document.getElementById('button').innerHTML = "Cooldown: 5";
  
-      setTimeout(function() {
-         if (HAKARIUSED == false) {
-            var same = parseInt(document.getElementById('1').innerHTML);
-            if (document.getElementById('1').innerHTML == same && document.getElementById('2').innerHTML == same && document.getElementById('3').innerHTML == same && document.getElementById('4').innerHTML == same && document.getElementById('5').innerHTML == same) {
-               luckbooster += same/10;
-               document.getElementById('1').outerHTML = "<a class='ledgendnum' id='1'>"+same+"</a>";
-               document.getElementById('2').outerHTML = "<a class='ledgendnum' id='2'>"+same+"</a>";
-               document.getElementById('3').outerHTML = "<a class='ledgendnum' id='3'>"+same+"</a>";
-               document.getElementById('4').outerHTML = "<a class='ledgendnum' id='4'>"+same+"</a>";
-               document.getElementById('5').outerHTML = "<a class='ledgendnum' id='5'>"+same+"</a>";
-               document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
-               HAKARIUSED = true;
-               document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Hakari's luck "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
-            }
-         }
+      	setTimeout(function() {
+        	 if (HAKARIUSED == false) {
+        	    var same = parseInt(document.getElementById('1').innerHTML);
+        	    if (document.getElementById('1').innerHTML == same && document.getElementById('2').innerHTML == same && document.getElementById('3').innerHTML == same && document.getElementById('4').innerHTML == same && document.getElementById('5').innerHTML == same) {
+        	       luckbooster += same/10;
+        	       document.getElementById('1').outerHTML = "<a class='ledgendnum' id='1'>"+same+"</a>";
+        	       document.getElementById('2').outerHTML = "<a class='ledgendnum' id='2'>"+same+"</a>";
+        	       document.getElementById('3').outerHTML = "<a class='ledgendnum' id='3'>"+same+"</a>";
+        	       document.getElementById('4').outerHTML = "<a class='ledgendnum' id='4'>"+same+"</a>";
+        	       document.getElementById('5').outerHTML = "<a class='ledgendnum' id='5'>"+same+"</a>";
+        	       document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
+        	       HAKARIUSED = true;
+        	       document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Hakari's luck "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
+        	    }
+        	 }
+	
+	         cooldown = false;
+  	       document.getElementById('button').innerHTML = "Roll";
+  	    }, 5500);	
 
-         cooldown = false;
-         document.getElementById('button').innerHTML = "Roll";
-      }, 5500);
-
-      setTimeout(function() {
+    	  setTimeout(function() {
          if (r1 == 10) {
             document.getElementById('1').innerHTML = "0";
          } else {
@@ -261,7 +261,7 @@ function item(r1, r2, r3, r4, r5) {
          }
          document.getElementById('button').innerHTML = "Cooldown: 0";
       }, 5000);
-   } else if (speedboost == true && tsb == false) {
+   	} else if (speedboost == true && tsb == false) {
    var totalval = 1;
       cooldown = true;
       var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
@@ -418,7 +418,7 @@ function item(r1, r2, r3, r4, r5) {
          }
          document.getElementById('button').innerHTML = "Cooldown: 0";
       }, 2500);
-   } else if (tsb == true) {
+   	} else if (tsb == true) {
       var totalval = 1;
       var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
       cooldown = true;
@@ -427,7 +427,6 @@ function item(r1, r2, r3, r4, r5) {
       document.getElementById('3').outerHTML = "<a class='num' id='3'>0</a>";
       document.getElementById('4').outerHTML = "<a class='num' id='4'>0</a>";
       document.getElementById('5').outerHTML = "<a class='num' id='5'>0</a>";
-      document.getElementById('totalrarity').innerHTML = "Rolling!";
 
       if (HAKARIUSED == false) {
          var same = r1
@@ -513,6 +512,7 @@ function item(r1, r2, r3, r4, r5) {
       if (r5 == 5 || r5 == 7 || r5 == 9) {
          document.getElementById('5').outerHTML = "<a class='rarenum' id='5'>"+r5+"</a>";
       }
+		cooldown = false;
    }
    }
 }

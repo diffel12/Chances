@@ -61,6 +61,26 @@ var speedboost = false;
 var adminluck = 0
 var xtraluck = 0;
 var tsb = false;
+var cap = 0.5;
+var limitless = false;
+
+function toggleCap() {
+	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
+         document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
+  if (limitless == false) {
+      console.log("Infinite luck activated");
+      limitless = true;
+   } else if (limitless == true) {
+      console.log("Infinite luck deactivated");
+      limitless = false;
+   }
+}
+
+function setCap(Cp) {
+	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
+  cap = Cp/100
+ document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
+}
 
 function instantRoll() {
    document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
@@ -107,7 +127,11 @@ function item(r1, r2, r3, r4, r5) {
    if (cooldown == false) {
    	if (speedboost == false && tsb == false) {
       	var totalval = 1;
-      	var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+      	if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
       	cooldown = true;
       	document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
       	document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
@@ -266,7 +290,11 @@ function item(r1, r2, r3, r4, r5) {
    	} else if (speedboost == true && tsb == false) {
    var totalval = 1;
       cooldown = true;
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+      if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
       document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
       document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
       document.getElementById('3').outerHTML = "<a class='num' id='3'>0</a>";
@@ -422,7 +450,11 @@ function item(r1, r2, r3, r4, r5) {
       }, 2500);
    	} else if (tsb == true) {
       var totalval = 1;
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+      if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
       cooldown = true;
       document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
       document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
@@ -522,14 +554,22 @@ function item(r1, r2, r3, r4, r5) {
 function devclick(r1,r2,r3,r4,r5) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    if (cooldown == false) {
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+      if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
       item(r1, r2, r3, r4, r5);
    }
 }
         
 document.getElementById('button').addEventListener('click', function() {
    if (cooldown == false) {
-      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+		 if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
       var value1 = getRandomNumber(boostedluck);
       var value2 = getRandomNumber(boostedluck);
       var value3 = getRandomNumber(boostedluck);
@@ -542,7 +582,11 @@ document.getElementById('button').addEventListener('click', function() {
 document.addEventListener('keydown', function() {
    if (event.key == ' ') {
       if (cooldown == false) {
-         var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
+         if (limitless == false) {
+        var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), cap);
+		 } else {
+        var boostedluck = applyLuckBoost(chosenrarities, luckbooster);
+		 }
          var value1 = getRandomNumber(boostedluck);
          var value2 = getRandomNumber(boostedluck);
          var value3 = getRandomNumber(boostedluck);

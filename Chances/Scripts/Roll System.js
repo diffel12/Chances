@@ -63,18 +63,18 @@ var xtraluck = 0;
 var tsb = false;
 
 function instantRoll() {
+   document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    if (tsb == false) {
       console.log("Instant-roll activated");
       tsb = true;
-
    } else if (tsb == true) {
       console.log("Instant-roll deactivated");
       tsb = false;
-
    }
 }
 
 function addLuck(perc) {
+	 document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    luckbooster += perc/100
    adminluck += perc
    document.getElementById('boosteritem5').outerHTML = "<div class='boosteritem' id='boosteritem5'><h2>Admin Boost</h2> Luck Boost: "+adminluck+"%</div>";
@@ -91,12 +91,14 @@ function getRandomList(lists) {
 var chosenrarities = getRandomList(raritylists);
 
 function showraritytable() {
+	 document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    for (let i = 0; i < chosenrarities.length; i++) {
       console.log(chosenrarities[i]*100+"%");
    }
 }
 
 function setTable(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10=0) {
+	 document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    chosenrarities = [n1/100,n2/100,n3/100,n4/100,n5/100,n6/100,n7/100,n8/100,n9/100,n10/100]
    document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
 }
@@ -518,6 +520,7 @@ function item(r1, r2, r3, r4, r5) {
 }
 
 function devclick(r1,r2,r3,r4,r5) {
+	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
    if (cooldown == false) {
       var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
       item(r1, r2, r3, r4, r5);

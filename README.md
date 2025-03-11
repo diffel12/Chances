@@ -1,7 +1,13 @@
 # Chances
 A FREE game based off of a slot machine, hit download on the files above!
 
-REMEMBER: YOU MUST UNZIP FOR GAME TO WORK
+How to download:
+
+1. hit the code button above the files,
+
+2. hit download ZIP,
+
+3. unZIP the file so it can access other files,
 
 ### Update 1.9.3: 
 

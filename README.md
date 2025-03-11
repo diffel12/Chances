@@ -9,6 +9,10 @@ How to download:
 
 3. unZIP the file so it can access other files,
 
+4. hit "RUN GAME.html" to run the game,
+
+5. Play and have fun!
+
 ### Update 1.9.3: 
 
 fixed a bug that broke the 2.5 sec cd mode!

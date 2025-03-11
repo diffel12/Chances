@@ -3,7 +3,7 @@ A FREE game based off of a slot machine, hit download on the files above!
 
 REMEMBER: YOU MUST UNZIP FOR GAME TO WORK
 
-Update 1.9.3: 
+## Update 1.9.3: 
 
 fixed a bug that broke the 2.5 sec cd mode!
 

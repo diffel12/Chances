@@ -248,6 +248,7 @@ function item(r1, r2, r3, r4, r5) {
    } else {
    var totalval = 1;
       cooldown = true;
+      var boostedluck = capStone(applyLuckBoost(chosenrarities, luckbooster), 0.5);
       document.getElementById('1').outerHTML = "<a class='num' id='1'>0</a>";
       document.getElementById('2').outerHTML = "<a class='num' id='2'>0</a>";
       document.getElementById('3').outerHTML = "<a class='num' id='3'>0</a>";

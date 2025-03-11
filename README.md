@@ -13,12 +13,16 @@ How to download:
 
 5. Play and have fun!
 
-### Update 1.9.3: 
+### Update 1.9.4: 
 
-fixed a bug that broke the 2.5 sec cd mode!
+Added 2 new commands: disable cap, change cap.limit!
 
-removed "0" as an obtainable number (it can still be used if you set it though).
+more optimization!
 
-added a new instant roll command!
+### Coming soon:
 
-using a special command changes the title to "cheating isn't lucky..."!
+"0" support coming soon! 😏
+
+more epic combos with your favorite numbers!
+
+wait, why am I remembering things, WHY CAN I REMEMBER, I CAN SEE IT ALLL!!!

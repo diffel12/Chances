@@ -26,3 +26,5 @@ more optimization!
 more epic combos with your favorite numbers!
 
 wait, why am I remembering things, WHY CAN I REMEMBER, I CAN SEE IT ALLL!!!
+
+Sound effects during rolls!

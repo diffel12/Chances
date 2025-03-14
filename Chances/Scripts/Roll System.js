@@ -1,3 +1,6 @@
+const audio = new Audio();
+audio.src = "Assets/Click1.wav";
+
 function calculateCumulativeWeights(rarities) {
    let cumulativeWeights = [];
    let sum = 0;
@@ -162,6 +165,7 @@ function item(r1, r2, r3, r4, r5) {
   	    }, 5500);	
 
     	  setTimeout(function() {
+		  audio.play();
          if (r1 == 10) {
             document.getElementById('1').innerHTML = "0";
          } else {
@@ -179,6 +183,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 1000);
 
       setTimeout(function() {
+	      audio.play();
          if (r2 == 10) {
             document.getElementById('2').innerHTML = "0";
          } else {
@@ -196,6 +201,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 2000);
 
       setTimeout(function() {
+	      audio.play();
          if (r3 == 10) {
             document.getElementById('3').innerHTML = "0";
          } else {
@@ -227,6 +233,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 3000);
 
       setTimeout(function() {
+	      audio.play();
          if (r4 == 10) {
             document.getElementById('4').innerHTML = "0";
          } else {
@@ -258,6 +265,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 4000);
 
       setTimeout(function() {
+	      audio.play();
          if (r5 == 10) {
             document.getElementById('5').innerHTML = "0";
          } else {
@@ -324,6 +332,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 3000);
 
       setTimeout(function() {
+	      audio.play();
          if (r1 == 10) {
             document.getElementById('1').innerHTML = "0";
          } else {
@@ -341,6 +350,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 500);
 
       setTimeout(function() {
+	      audio.play();
          if (r2 == 10) {
             document.getElementById('2').innerHTML = "0";
          } else {
@@ -358,6 +368,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 1000);
 
       setTimeout(function() {
+	      audio.play();
          if (r3 == 10) {
             document.getElementById('3').innerHTML = "0";
          } else {
@@ -389,6 +400,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 1500);
 
       setTimeout(function() {
+	      audio.play();
          if (r4 == 10) {
             document.getElementById('4').innerHTML = "0";
          } else {
@@ -419,6 +431,7 @@ function item(r1, r2, r3, r4, r5) {
       }, 2000);
 
       setTimeout(function() {
+	      audio.play();
          if (r5 == 10) {
             document.getElementById('5').innerHTML = "0";
          } else {

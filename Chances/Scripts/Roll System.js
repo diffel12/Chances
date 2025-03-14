@@ -72,13 +72,14 @@ function Pass(v1) {
 	if (v1 == 95821) {
 		admin = true;
 		console.log("Welcome, Voidd.");
+                document.getElementById('secret').innerHTML = "Chances";
 	} else {
 		console.log("Incorrect.")
 	}
 }
 
 function toggleCap() {
-	if (admin == "false") {
+	if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
          document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
@@ -92,7 +93,7 @@ function toggleCap() {
 }
 
 function setCap(Cp) {
-	if (admin == "false") {
+	if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
   cap = Cp/100
@@ -100,7 +101,9 @@ function setCap(Cp) {
 }
 
 function instantRoll() {
-   document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
+   if (admin == false) {
+	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
+	}
    if (tsb == false) {
       console.log("Instant-roll activated");
       tsb = true;
@@ -111,7 +114,7 @@ function instantRoll() {
 }
 
 function addLuck(perc) {
-	 if (admin == "false") {
+	 if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
    luckbooster += perc/100
@@ -130,7 +133,7 @@ function getRandomList(lists) {
 var chosenrarities = getRandomList(raritylists);
 
 function showraritytable() {
-	 if (admin == "false") {
+	 if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
    for (let i = 0; i < chosenrarities.length; i++) {
@@ -139,7 +142,7 @@ function showraritytable() {
 }
 
 function setTable(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10=0) {
-	 if (admin == "false") {
+	 if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
    chosenrarities = [n1/100,n2/100,n3/100,n4/100,n5/100,n6/100,n7/100,n8/100,n9/100,n10/100]
@@ -176,7 +179,7 @@ function item(r1, r2, r3, r4, r5) {
         	       document.getElementById('5').outerHTML = "<a class='ledgendnum' id='5'>"+same+"</a>";
         	       document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
         	       HAKARIUSED = true;
-        	       document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Hakari's luck "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
+        	       document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Lucky Number "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
         	    }
         	 }
 	
@@ -343,7 +346,7 @@ function item(r1, r2, r3, r4, r5) {
                document.getElementById('5').outerHTML = "<a class='ledgendnum' id='5'>"+same+"</a>";
                document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
                HAKARIUSED = true;
-               document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Hakari's luck "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
+               document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Lucky Number "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
             }
          }
 
@@ -506,7 +509,7 @@ function item(r1, r2, r3, r4, r5) {
             document.getElementById('5').outerHTML = "<a class='ledgendnum' id='5'>"+same+"</a>";
             document.getElementById('beastiary').innerHTML = "<a class='invis'>Rarities of the numbers ----------------</a><br><a class='beast' id='1b'>1's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='2b'>2's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='3b'>3's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='4b'>4's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='5b'>5's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='6b'>6's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='7b'>7's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='8b'>8's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a><br><a class='beast' id='9b'>9's rarity: ??%</a><br><a class='invis'>---------------------------------------------</a>";
             HAKARIUSED = true;
-            document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Hakari's luck "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
+            document.getElementById('boosteritem2').outerHTML = "<div class='boosteritem' id='boosteritem2'><h2>Lucky Number "+same+""+same+""+same+"</h2> Luck Boost: "+(same*10)+"%</div>";
          }
       }
 
@@ -585,7 +588,7 @@ function item(r1, r2, r3, r4, r5) {
 }
 
 function devclick(r1,r2,r3,r4,r5) {
-	if (admin == "false") {
+	if (admin == false) {
 	document.getElementById('secret').innerHTML = "Cheating isn't lucky...";
 	}
    if (cooldown == false) {

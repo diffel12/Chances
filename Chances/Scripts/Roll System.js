@@ -69,7 +69,7 @@ var admin = false;
 var limitless = false;
 
 function Pass(v1) {
-	if (v1 == 95821) {
+	if (v1 == PASSWORD) {
 		admin = true;
 		console.log("Welcome, Voidd.");
                 document.getElementById('secret').innerHTML = "Chances";

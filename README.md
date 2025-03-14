@@ -17,10 +17,10 @@ How to download:
 
 SOUNDSSS, YAY!
 
+*under constuction!*
+
 ### Coming soon:
 
 "0" support coming soon! 😏
-
-more epic combos with your favorite numbers!
 
 wait, why am I remembering things, WHY CAN I REMEMBER, I CAN SEE IT ALLL!!!

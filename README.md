@@ -17,7 +17,9 @@ How to download:
 
 SOUNDSSS, YAY!
 
-*under constuction!*
+Password system so I dont get funky cheatr message.
+
+*under construction!*
 
 ### Coming soon:
 

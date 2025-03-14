@@ -13,11 +13,9 @@ How to download:
 
 5. Play and have fun!
 
-### Update 1.9.4: 
+### Update 1.9.5: 
 
-Added 2 new commands: disable cap, change cap.limit!
-
-more optimization!
+SOUNDSSS, YAY!
 
 ### Coming soon:
 
@@ -26,5 +24,3 @@ more optimization!
 more epic combos with your favorite numbers!
 
 wait, why am I remembering things, WHY CAN I REMEMBER, I CAN SEE IT ALLL!!!
-
-Sound effects during rolls!

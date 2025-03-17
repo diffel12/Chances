@@ -73,6 +73,11 @@ function Pass(v1) {
 		admin = true;
 		console.log("Welcome, Voidd.");
                 document.getElementById('secret').innerHTML = "Chances";
+	} else if (v1 == "logout" && admin == true) {
+		admin = false;
+		console.log("Bye, Voidd.");
+	} else if (v1 == "logout" && admin == false) {
+		console.log("You are already logged out");
 	} else {
 		console.log("Incorrect.")
 	}

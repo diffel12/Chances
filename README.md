@@ -17,9 +17,7 @@ How to download:
 
 SOUNDSSS, YAY!
 
-Password system so I dont get funky cheatr message. undr contsrctn
-
-*under construction!*
+Password system so I dont get funky cheatr message.
 
 ### Coming soon:
 
